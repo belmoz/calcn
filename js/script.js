@@ -107,7 +107,7 @@ for (let i = 0; i < completedCounts.length; i++) {
 		lostHour.innerHTML = (new Date((norm * day - completedCount.value) / norm * 3600000)).getHours() - 2 + ":" + ('0' + (new Date((norm * day - completedCount.value) / norm * 3600000)).getMinutes()).slice(-2);
 
 		if (completedCount.value > norm * day) {
-			lostHour.innerHTML = "максимум " + (norm * day);
+			lostHour.innerHTML = "максимум " + Math.floor(norm * day);
 		}
 
 
