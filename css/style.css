@@ -566,6 +566,9 @@ body {
   flex: 0 0 50%;
   color: #b0b0b0;
 }
+.subtext:first-child {
+  flex: 1 0 100%;
+}
 .subtext p {
   margin: 0 0 5px 0;
 }
