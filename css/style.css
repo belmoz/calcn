@@ -561,9 +561,7 @@ body {
   margin: 0 0 10px 0;
  }
 .subtext {
-  flex: 1 1 50%;
-  p {
-    display: inline;
+  flex: 0 1 50%;
 }
 
 @media (max-width: 991.98px) {
