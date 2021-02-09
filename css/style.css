@@ -560,6 +560,7 @@ body {
   display: flex;
   margin: 0 0 10px 0;
   color: #b0b0b0;
+  flex-wrap: wrap;
  }
 .subtext {
   flex: 0 0 50%;
