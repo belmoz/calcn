@@ -481,8 +481,12 @@ body {
 .completedCount__label {
   width: 100%;
   color: #b0b0b0;
-  font-size: calc( 20px - (500px - 100vw) * ((20 - 18) / (500 - 320)));
-  line-height: calc( 18px - (500px - 100vw) * ((18 - 16) / (500 - 320)));
+  font-size: calc(
+ 20px - (500px - 100vw) *
+ ((20 - 18) / (500 - 320)));
+  line-height: calc(
+ 18px - (500px - 100vw) *
+ ((18 - 16) / (500 - 320)));
   font-weight: 300;
   position: absolute;
   top: 50%;
@@ -500,8 +504,12 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100px;
           flex: 0 1 100px;
-  font-size: calc( 16px - (500px - 100vw) * ((16 - 16) / (500 - 320)));
-  line-height: calc( 14px - (500px - 100vw) * ((14 - 14) / (500 - 320)));
+  font-size: calc(
+ 16px - (500px - 100vw) *
+ ((16 - 16) / (500 - 320)));
+  line-height: calc(
+ 14px - (500px - 100vw) *
+ ((14 - 14) / (500 - 320)));
   font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,7 +529,7 @@ body {
   background-color: rgba(118, 118, 128, 0.12);
   border-radius: 8px;
   padding: 2px;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 20px 0px;
   font-size: 16px;
   font-weight: 300;
 }
@@ -546,6 +554,15 @@ body {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
+}
+
+.text {
+  flex: 0 0 50%;
+  margin: 0 0 10px 0;
+ }
+.text:first-chaild {
+  display: block;
+  width: 100%;
 }
 
 @media (max-width: 991.98px) {
