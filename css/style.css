@@ -564,7 +564,7 @@ body {
   flex: 0 1 50%;
 }
 .subtext p {
-  line-height: 14px;
+  line-height: 16px;
 }
 
 @media (max-width: 991.98px) {
