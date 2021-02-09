@@ -568,6 +568,7 @@ body {
 }
 .subtext:first-child {
   flex: 1 0 100%;
+  margin: 0 0 7px 0;
 }
 .subtext p {
   margin: 0 0 5px 0;
