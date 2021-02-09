@@ -562,7 +562,7 @@ body {
   color: #b0b0b0;
  }
 .subtext {
-  flex: 0 1 50%;
+  flex: 0 0 50%;
   color: #b0b0b0;
 }
 .subtext p {
