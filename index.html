@@ -1,136 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Калкулятор нормы</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
-	<!-- <meta name="robots" content="noindex, nofollow" /> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-</head>
-
-<body>
-	<div class="wrapper">
-		<header class="header">
-	
-</header>
-		<main class="page">
-			<div class="title">
-				<span class="title__text">Расчёт такалы до премии</span>
-			</div>
-			<form action="">
-				<div class="selectDay">
-					<div class="selectDay__slider">
-						<div class="selectDay__indicator"></div>
-					</div>
-					<input class="selectDay__input _active" type="radio" name="day" id="vs" value="11" onclick="checkD()">
-					<label class="selectDay__label" for="vs">Вс-Чт</label>
-					<input class="selectDay__input" type="radio" name="day" id="pt" value="8.5" onclick="checkD()">
-					<label class="selectDay__label" for="pt">Пятница</label>
-					<input class="selectDay__input" type="radio" name="day" id="sb" value="9.75" onclick="checkD()">
-					<label class="selectDay__label" for="sb">Суббота</label>
-				</div>
-				<div class="selectMachCount">
-					<div class="selectMachCount__slider">
-						<div class="selectMachCount__indicator"></div>
-					</div>
-					<input class="selectMachCount__input _active" type="radio" name="machCount" id="two" value="2" onclick="checkMC()">
-					<label class="selectMachCount__label" for="two">2</label>
-					<input class="selectMachCount__input" type="radio" name="machCount" id="three" value="3" onclick="checkMC()">
-					<label class="selectMachCount__label" for="three">3</label>
-				</div>
-				<div class="calc">
-					<!-- 1 строка --------------------------------------------------->
-					<div class="calc__item">
-						<select name="typeStrip" id="typeStrip1" class="typeStrip">
-							<option class="typeStrip__option" value="0805">0805</option>
-							<option class="typeStrip__option" value="1206">1206</option>
-							<option class="typeStrip__option" value="2010">2010</option>
-							<option class="typeStrip__option" value="2512">2512</option>
-						</select>
-						<div class="completedCount">
-							<input class="completedCount__input" type="number" name="completedCount" id="completedCount1" autocomplete="off" required>
-							<label class="completedCount__label" for="completedCount1">количество</label>
-							<span class="lostHours" id="result">время простоя</span>
-						</div>
-					</div>
-					<!-- 2 строка --------------------------------------------------->
-					<div class="calc__item">
-						<select name="typeStrip" id="typeStrip2" class="typeStrip">
-							<option class="typeStrip__option" value="0805">0805</option>
-							<option class="typeStrip__option" value="1206">1206</option>
-							<option class="typeStrip__option" value="2010">2010</option>
-							<option class="typeStrip__option" value="2512">2512</option>
-						</select>
-						<div class="completedCount">
-							<input class="completedCount__input" type="number" name="completedCount" id="completedCount2" autocomplete="off" required>
-							<label class="completedCount__label" for="completedCount2">количество</label>
-							<span class="lostHours">время простоя</span>
-						</div>
-					</div>
-					<!-- 3 строка --------------------------------------------------->
-					<div class="calc__item">
-						<select name="typeStrip" id="typeStrip3" class="typeStrip">
-							<option class="typeStrip__option" value="0805">0805</option>
-							<option class="typeStrip__option" value="1206">1206</option>
-							<option class="typeStrip__option" value="2010">2010</option>
-							<option class="typeStrip__option" value="2512">2512</option>
-						</select>
-						<div class="completedCount">
-							<input class="completedCount__input" type="number" name="completedCount" id="completedCount3" autocomplete="off" required>
-							<label class="completedCount__label" for="completedCount3">количество</label>
-							<span class="lostHours">время простоя</span>
-						</div>
-					</div>
-					<!-- 4 строка --------------------------------------------------->
-					<div class="calc__item">
-						<select name="typeStrip" id="typeStrip4" class="typeStrip">
-							<option class="typeStrip__option" value="0805">0805</option>
-							<option class="typeStrip__option" value="1206">1206</option>
-							<option class="typeStrip__option" value="2010">2010</option>
-							<option class="typeStrip__option" value="2512">2512</option>
-						</select>
-						<div class="completedCount">
-							<input class="completedCount__input" type="number" name="completedCount" id="completedCount4" autocomplete="off" required>
-							<label class="completedCount__label" for="completedCount4">количество</label>
-							<span class="lostHours">время простоя</span>
-						</div>
-					</div>
-				</div>
-				<div class="total"><span>Рассчитать</span></div>
-				<div class="text">
-                                    <p>Премия рассчитывается: дневная норма + 2 часа</p>
-                                </div>
-                                <div class="text">
-                                <div class="subtext">Минимум/час:</div>
-                                <div class="subtext">
-                                    <p>2 машины:</p>
-                                    <p>0805 - 19000/час</p>
-                                    <p>1206 - 16500/час</p>
-                                    <p>2010 - 13500/час</p>
-                                    <p>2512 - 14500/час</p>
-                                </div>
-                                <div class="subtext">
-                                    <p>3 машины:</p>
-                                    <p>0805 - 18000/час</p>
-                                    <p>1206 - 15500/час</p>
-                                    <p>2010 - 13000/час</p>
-                                    <p>2512 - 13500/час</p>
-                                </div>
-                                </div>
-			</form>
-		</main>
-		<footer class="footer">
-	<div class="container">
-		<div class="footer__row">
-			
-		</div>
-	</div>
-</footer>
-	</div>
-	
-	<script src="js/script.js"></script>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="en"><head>	<title>Калкулятор нормы</title>	<meta charset="UTF-8">	<meta name="format-detection" content="telephone=no">	<link rel="stylesheet" type="text/css" href="css/style.css">	<!-- <link rel="shortcut icon" href="favicon.ico"> -->	<!-- <meta name="robots" content="noindex, nofollow" /> -->	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></head><body>	<div class="wrapper">		<header class="header">	</header>		<main class="page">			<div class="title">				<span class="title__text">Расчёт такалы до максимальной премии</span>			</div>			<form action="">				<div class="selectDay">					<div class="selectDay__slider">						<div class="selectDay__indicator"></div>					</div>					<input class="selectDay__input _active" type="radio" name="day" id="vs" value="11" onclick="checkD()">					<label class="selectDay__label" for="vs">Вс-Чт</label>					<input class="selectDay__input" type="radio" name="day" id="pt" value="8.5" onclick="checkD()">					<label class="selectDay__label" for="pt">Пятница</label>					<input class="selectDay__input" type="radio" name="day" id="sb" value="9.75" onclick="checkD()">					<label class="selectDay__label" for="sb">Суббота</label>				</div>				<div class="selectMachCount">					<div class="selectMachCount__slider">						<div class="selectMachCount__indicator"></div>					</div>					<input class="selectMachCount__input _active" type="radio" name="machCount" id="two" value="2" onclick="checkMC()">					<label class="selectMachCount__label" for="two">2</label>					<input class="selectMachCount__input" type="radio" name="machCount" id="three" value="3" onclick="checkMC()">					<label class="selectMachCount__label" for="three">3</label>				</div>				<div class="calc">					<!-- 1 строка --------------------------------------------------->					<div class="calc__item">						<select name="typeStrip" id="typeStrip1" class="typeStrip">							<option class="typeStrip__option" value="0805">0805</option>							<option class="typeStrip__option" value="1206">1206</option>							<option class="typeStrip__option" value="2010">2010</option>							<option class="typeStrip__option" value="2512">2512</option>						</select>						<div class="completedCount">							<input class="completedCount__input" type="number" name="completedCount" id="completedCount1" autocomplete="off" required>							<label class="completedCount__label" for="completedCount1">количество</label>							<span class="lostHours" id="result">время простоя</span>						</div>					</div>					<!-- 2 строка --------------------------------------------------->					<div class="calc__item">						<select name="typeStrip" id="typeStrip2" class="typeStrip">							<option class="typeStrip__option" value="0805">0805</option>							<option class="typeStrip__option" value="1206">1206</option>							<option class="typeStrip__option" value="2010">2010</option>							<option class="typeStrip__option" value="2512">2512</option>						</select>						<div class="completedCount">							<input class="completedCount__input" type="number" name="completedCount" id="completedCount2" autocomplete="off" required>							<label class="completedCount__label" for="completedCount2">количество</label>							<span class="lostHours">время простоя</span>						</div>					</div>					<!-- 3 строка --------------------------------------------------->					<div class="calc__item">						<select name="typeStrip" id="typeStrip3" class="typeStrip">							<option class="typeStrip__option" value="0805">0805</option>							<option class="typeStrip__option" value="1206">1206</option>							<option class="typeStrip__option" value="2010">2010</option>							<option class="typeStrip__option" value="2512">2512</option>						</select>						<div class="completedCount">							<input class="completedCount__input" type="number" name="completedCount" id="completedCount3" autocomplete="off" required>							<label class="completedCount__label" for="completedCount3">количество</label>							<span class="lostHours">время простоя</span>						</div>					</div>					<!-- 4 строка --------------------------------------------------->					<div class="calc__item">						<select name="typeStrip" id="typeStrip4" class="typeStrip">							<option class="typeStrip__option" value="0805">0805</option>							<option class="typeStrip__option" value="1206">1206</option>							<option class="typeStrip__option" value="2010">2010</option>							<option class="typeStrip__option" value="2512">2512</option>						</select>						<div class="completedCount">							<input class="completedCount__input" type="number" name="completedCount" id="completedCount4" autocomplete="off" required>							<label class="completedCount__label" for="completedCount4">количество</label>							<span class="lostHours">время простоя</span>						</div>					</div>				</div>				<div class="total"><span>Рассчитать</span></div>			</form>			<div class="info">				<div class="info__spoller">Доп. информация</div>				<div class="info__block">					<div class="info__row">Премия рассчитывается:<br>дневная норма + 2 часа.</div>					<div class="info__row">Минимум/час:</div>					<div class="info__row">						<div class="info__column">							<p>2 машины:</p>							<p>0805 - 19000/час</p>							<p>1206 - 16500/час</p>							<p>2010 - 13500/час</p>							<p>2512 - 14500/час</p>						</div>						<div class="info__column">							<p>3 машины:</p>							<p>0805 - 18000/час</p>							<p>1206 - 15500/час</p>							<p>2010 - 13000/час</p>							<p>2512 - 13500/час</p>						</div>					</div>				</div>			</div>		</main>		<footer class="footer">	<div class="container">		<div class="footer__row">					</div>	</div></footer>	</div>		<script src="js/script.js"></script></body></html>
